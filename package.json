@@ -1,30 +1,30 @@
 {
-  "name": "telerik-front-end-project",
-  "version": "1.0.0",
-  "description": "Front-end final project",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MilenaSh/Telerik-front-end-project.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MilenaSh/Telerik-front-end-project/issues"
-  },
-  "homepage": "https://github.com/MilenaSh/Telerik-front-end-project#readme",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "bootstrap": "^3.3.7",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.15.5",
-    "gulp": "^3.9.1",
-    "handlebars": "^4.0.10",
-    "jquery": "^3.2.1",
-    "mongodb": "^2.2.31",
-    "pump": "^1.0.2"
-  }
+    "name": "telerik-front-end-project",
+    "version": "1.0.0",
+    "description": "Front-end final project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MilenaSh/Telerik-front-end-project.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MilenaSh/Telerik-front-end-project/issues"
+    },
+    "homepage": "https://github.com/MilenaSh/Telerik-front-end-project#readme",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "bootstrap": "^3.3.7",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.15.5",
+        "gulp": "^3.9.1",
+        "handlebars": "^4.0.10",
+        "jquery": "^3.2.1",
+        "mongodb": "^2.2.31",
+        "pump": "^1.0.2"
+    }
 }
