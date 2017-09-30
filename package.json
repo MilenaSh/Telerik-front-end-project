@@ -21,10 +21,12 @@
         "bootstrap": "^3.3.7",
         "cookie-parser": "^1.4.3",
         "express": "^4.15.5",
+        "fs": "0.0.1-security",
         "gulp": "^3.9.1",
         "handlebars": "^4.0.10",
         "jquery": "^3.2.1",
         "mongodb": "^2.2.31",
+        "path": "^0.12.7",
         "pump": "^1.0.2"
     }
 }
