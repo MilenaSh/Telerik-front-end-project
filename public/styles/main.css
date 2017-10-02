@@ -12,19 +12,6 @@ body {
     width: 100%;
 }
 
-.wrapper-center {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 960px;
-    width: 100%;
-    /*border: 1px solid yellow;*/
-}
-
-A .container-fluid {
-    margin: 0;
-    padding: 0;
-}
-
 header {
     height: 180px;
 }
@@ -38,6 +25,19 @@ header {
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#D0D0D0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.wrapper-center {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 960px;
+    width: 100%;
+    /*border: 1px solid yellow;*/
+}
+
+A .container-fluid {
+    margin: 0;
+    padding: 0;
 }
 
 #nav {
