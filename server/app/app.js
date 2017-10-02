@@ -22,6 +22,8 @@ const init = (data) => {
     // TODO
 
     app.use(express.static('public'));
+    //app.use(express.static('scripts'));
+
     // app.use(express.static('node_modules'));
     // app.use('/libs', express.static(__dirname + '/node_modules'));
 
