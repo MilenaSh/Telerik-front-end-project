@@ -1,12 +1,7 @@
-/* @font-face {
-    font-family: LeagueGothic;
-    src: url('../fonts/LeagueGothic-Regular.otf') format("opentype");
-}
-
 @font-face {
-    font-family: DroidSans;
-    src: url('../fonts/DroidSans-Regular.ttf') format("truetype");
-} */
+    font-family: BlackJackRegular;
+    src: url('../fonts/blackjack.otf');
+}
 
 html,
 body {
@@ -25,7 +20,7 @@ body {
     /*border: 1px solid yellow;*/
 }
 
-.container-fluid {
+A .container-fluid {
     margin: 0;
     padding: 0;
 }
@@ -38,6 +33,11 @@ header {
     margin-top: 60px;
     margin-bottom: 20px;
     padding: 10px;
+    font-size: 36pt;
+    font-family: BlackJackRegular;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#D0D0D0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #nav {
