@@ -3,6 +3,11 @@
     src: url('../fonts/blackjack.otf');
 }
 
+@font-face {
+    font-family: DroidSans;
+    src: url('../fonts/DroidSans.ttf');
+}
+
 html,
 body {
     margin: 0;
@@ -61,6 +66,8 @@ A .container-fluid {
     color: white;
     padding-right: 20px;
     text-decoration: none;
+    font-family: DroidSans;
+    text-shadow: 1px 1px 0 black;
 }
 
 #nav li a:hover {
