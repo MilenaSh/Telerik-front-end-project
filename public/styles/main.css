@@ -8,8 +8,14 @@
     src: url('../fonts/DroidSans.ttf');
 }
 
+@font-face {
+    font-family: ColaborateThin;
+    src: url('../fonts/ColabThi.otf');
+}
+
 html,
-body {
+body,
+head {
     margin: 0;
     padding: 0;
     background: url("../images/BG.png");
@@ -18,6 +24,8 @@ body {
 }
 
 header {
+    margin: 0;
+    padding: 0;
     height: 180px;
 }
 
@@ -26,10 +34,10 @@ header {
     margin-bottom: 20px;
     padding: 10px;
     font-size: 36pt;
-    font-family: BlackJackRegular;
+    /*font-family: BlackJackRegular;
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#D0D0D0));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;*/
 }
 
 .wrapper-center {
@@ -49,22 +57,44 @@ A .container-fluid {
     /* background: linear-gradient(50deg, #323b44 0%, #222930 80%, #13191f 100%); */
     padding: 0;
     margin: 0;
+    padding-left: 5px;
     background-color: #323b44;
     height: 49px;
     border-radius: 10px;
     border-style: none;
+    border-top: .5px solid #798897;
+    box-shadow: 0 1px #354350;
 }
 
-#nav li {
-    display: inline-block;
+.navbar-header {
     padding: 0;
     margin: 0;
 }
 
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid::before {
+    margin-left: 20px;
+}
+
+#nav li {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
 #nav li a {
-    font-size: 14px;
+    /*TODO - check font size*/
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
     color: white;
-    padding-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 22px;
     text-decoration: none;
     font-family: DroidSans;
     text-shadow: 1px 1px 0 black;
@@ -81,34 +111,28 @@ A .container-fluid {
 
 .share img {
     margin-top: 18px;
+    margin-right: 3px;
     height: 14px;
     width: 14px;
 }
 
 .share:last-child img {
     margin-top: 18px;
-    margin-right: 22px;
-    height: 14px;
-    width: 14px;
+    margin-right: 19px;
+    height: 13px;
+    width: 13px;
 }
 
 .share-icon {
     padding: 0 !important;
-    margin-right: 10px;
+}
+
+.share-icon img {
+    opacity: 0.4;
 }
 
 
 /*end navigation*/
-
-
-/*#rss,
-#twitter,
-#facebook {
-    height: 18px;
-    width: 16px;
-    padding: 0 !important;
-    margin-right: 10px;
-}*/
 
 
 /* footer */
@@ -116,10 +140,18 @@ A .container-fluid {
 footer {
     padding: 0;
     margin: 0;
-    height: 360px;
+    max-height: 360px;
+    background: url('../images/footer.png');
+}
+
+#footer-content {
+    padding: 0;
+    margin: 0;
 }
 
 #footer-content>li {
+    padding: 0;
+    margin: 0;
     width: 239px;
     list-style: none;
     margin-top: 50px;
@@ -136,15 +168,16 @@ footer {
 }
 
 #footer-content>li>h2 {
+    font-family: ColaborateThin;
+    font-size: 24px;
     color: white;
     margin-bottom: 12px;
 }
 
 #footer-content>li>p {
     margin-top: 5px;
-    color: white;
+    color: #88949D;
     font-family: DroidSans;
-    font-size: 12px;
     line-height: 140%;
 }
 
@@ -155,10 +188,11 @@ footer {
     margin-bottom: 10px;
     font-family: DroidSans;
     font-size: 12px;
-    color: white;
+    color: #88949D;
 }
 
-.foo-1 {
+
+/*.foo-1 {
     margin-right: 123px !important;
 }
 
@@ -166,6 +200,7 @@ footer {
     width: 256px !important;
     margin-right: 95px !important;
 }
+*/
 
 #nav-footer {
     height: 65px;

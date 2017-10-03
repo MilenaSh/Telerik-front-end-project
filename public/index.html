@@ -19,7 +19,7 @@
 <body>
     <header>
         <div class="wrapper-center">
-            <div id="logo">gooddoers</div>
+            <div id="logo"> <img src="./images/mylogo.png" alt="Logo"></div>
             <nav class="navbar navbar-inverse navbar-custom" id="nav">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -62,6 +62,7 @@
     <!--To load the templates-->
     <div id="content"></div>
 
+
     <footer>
         <div class="wrapper-center">
             <ul id="footer-content">
@@ -70,6 +71,7 @@
                     <p>We believe everyone should have the chance to make a difference. That's why we make it easy for good people and good causes to connect. We've connected millions of people with a great place to volunteer and helped tens of thousands
                         of organizations better leverage volunteers to create real impact. </p>
                 </li>
+
                 <li class="foo-2">
                     <h2>Custom Text Widget</h2>
                     <ul id="nested">
@@ -93,8 +95,8 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Themes</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Missions</a></li>
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Blog</a></li>
                 </ul>
@@ -103,8 +105,6 @@
             </div>
         </nav>
     </footer>
-
-
 
     <script src="./scripts/jquery-3.2.1.min.js"></script>
     <script src="./scripts/sammy-latest.min.js"></script>
@@ -129,8 +129,8 @@
                 $('#content').html('Items');
             });
 
-            this.get('#/items', function() {
-                $('#content').html('Items');
+            this.get('#/items/:id', function() {
+                $('#content').html('Item with id' + this.params.id);
             });
         });
 
