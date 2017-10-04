@@ -137,6 +137,10 @@ A .container-fluid {
 
 /* footer */
 
+
+/*TODO
+fix text spacing*/
+
 footer {
     padding: 0;
     margin: 0;
@@ -152,22 +156,24 @@ footer {
 #footer-content>li {
     padding: 0;
     margin: 0;
-    width: 239px;
     list-style: none;
     margin-top: 50px;
     margin-bottom: 50px;
     height: 180px;
-    overflow: hidden;
+    overflow: visible;
     display: inline-block;
 }
 
-@-moz-document url-prefix() {
+
+/*@-moz-document url-prefix() {
     #footer-content>li {
         height: 289px;
     }
-}
+}*/
 
 #footer-content>li>h2 {
+    margin: 0;
+    padding: 0;
     font-family: ColaborateThin;
     font-size: 24px;
     color: white;
@@ -178,40 +184,72 @@ footer {
     margin-top: 5px;
     color: #88949D;
     font-family: DroidSans;
-    line-height: 140%;
+    font-size: 12px;
+    /*line-height: 140%;*/
+}
+
+ul#nested {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #nested li {
-    list-style: disc outside none;
     display: list-item;
-    margin-left: 1.2em;
+    margin: 0;
+    padding: 0;
     margin-bottom: 10px;
     font-family: DroidSans;
     font-size: 12px;
     color: #88949D;
 }
 
+#nested li::before {
+    content: ' \25CF';
+    color: #232837;
+    width: 20px;
+    padding-right: 13px;
+}
 
-/*.foo-1 {
-    margin-right: 123px !important;
+.foo-1 {
+    margin: 0;
+    padding: 0;
+    max-width: 235px;
+    /*margin-right: 123px !important;*/
 }
 
 .foo-2 {
-    width: 256px !important;
+    margin: 0;
+    padding: 0;
+    max-width: 249px;
+    margin-left: 130px !important;
     margin-right: 95px !important;
+    max-height: 185px;
 }
-*/
+
+.last {
+    margin: 0;
+    padding: 0;
+    max-width: 235px;
+}
+
+
+/*footer navigation*/
 
 #nav-footer {
-    height: 65px;
+    height: 62px;
     background-color: #0f1419;
 }
 
 #nav-footer ul {
+    margin: 0;
+    padding: 0;
     float: left;
 }
 
 #nav-footer ul li {
+    margin: 0;
+    padding: 0;
     display: inline-block;
     list-style-type: none;
     margin: 20px 15px 26px 0;
@@ -221,6 +259,8 @@ footer {
     font-size: 14px;
     color: white;
     text-decoration: none;
+    font-family: DroidSans;
+    font-size: 12px;
 }
 
 #nav-footer ul li a:hover {
