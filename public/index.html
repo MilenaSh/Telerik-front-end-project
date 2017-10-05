@@ -13,6 +13,10 @@
     <!-- <link rel="stylesheet" href=" ../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/register.css">
+    <link rel="stylesheet" href="./styles/profile.css">
+
     <title>GoodDoers</title>
 </head>
 
@@ -20,7 +24,7 @@
     <header>
         <div class="wrapper-center">
             <div id="logo"> <img src="./images/mylogo.png" alt="Logo"></div>
-            <nav class="navbar navbar-inverse navbar-custom" id="nav">
+            <nav class="navbar navbar-inverse" id="nav">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -30,15 +34,15 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse">
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="#/">Home</a></li>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#/details">About Us</a></li>
-                            <li><a href="#">Missions</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="#/profile">Profile</a></li>
+                            <li><a href="#/about">About Us</a></li>
+                            <li><a href="#/missions">Missions</a></li>
+                            <li><a href="#/login">Login</a></li>
                             <li><a href="#" id="link-logout">Log out</a></li>
-                            <li><a href="#">Register</a></li>
+                            <li><a href="#/register">Register</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="share">
@@ -57,114 +61,8 @@
             </div>
     </header>
 
-
     <!--To load the templates-->
     <div id="content"></div>
-
-    <!--<div id="image-slider">
-        <carousel-3d :controls-visible="true" :clickable="false">
-            <slide v-for="(slide, i) in slides" :index="i">
-                <figure>
-                    <img src="http://lorempixel.com/500/335/">
-                    <figcaption>
-                        The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!
-                    </figcaption>
-                </figure>
-            </slide>
-        </carousel-3d>
-        <div id="controls"></div>
-    </div>-->
-    <!--Primary content-->
-    <div id="features">
-        <div class="wrapper-center">
-            <ul id="features-list">
-                <li>
-                    <img src="images/f1-icon.png" alt="feature-icon" id="f-1" />
-                    <div class="f-1">
-                        <h2>What We Offer</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                            malesuada mattis nibh at bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat.
-                        </p>
-                        <form action="/">
-                            <input type="image" src="images/readmore.png" alt="Read more" class="read-more">
-                        </form>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/f2-icon.png" alt="feature-icon" id="f-2" />
-                    <div class="f-1">
-                        <h2>Who We Are</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat.
-                        </p>
-                        <form action="/action_page.php">
-                            <input type="image" src="images/readmore.png" alt="Read more" class="read-more">
-                        </form>
-                    </div>
-                </li>
-                <li class="last">
-                    <img src="images/f3-icon.png" alt="feature-icon" id="f-3" />
-                    <div class="f-1">
-                        <h2>Our Mission</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat.
-                            Etiam mollis turpis ac libero interdum, id fringilla purus feugiat.
-                        </p>
-                        <form action="/action_page.php">
-                            <input type="image" src="images/readmore.png" alt="Read more" class="read-more">
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div id="info">
-            <div class="wrapper-center">
-                <img src="images/quote.png" alt="quote-icon" id="quote" />
-                <p>Vivamus id feugiat ligula. Nulla facilisi. Integer lacus justo, elementum eget consequat a, molestie nec sapien. Quisque tincidunt, nunc vitae adipiscing</p>
-            </div>
-        </div>
-        <!--End info-->
-        <div class="wrapper-center">
-            <img src="images/additional-info.png" alt="additional-info-icon" id="additional-info" />
-        </div>
-        <div id="recent-work">
-            <div class="wrapper-center">
-                <ul class="work">
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li class="last">
-                        <div class="work-box"></div>
-                    </li>
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li>
-                        <div class="work-box"></div>
-                    </li>
-                    <li class="last">
-                        <div class="work-box"></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--End recent work-->
-    </div>
-    <!--End features and content-->
-
 
     <footer>
         <div class="wrapper-center">
@@ -215,7 +113,7 @@
     <script src="./scripts/main.js"></script>
 
 
-    <script>
+    <!--<script>
         var templates = function() {
             function get(templateName) {
                 var promise = new Promise(function(resolve, reject) {
@@ -259,7 +157,7 @@
         $(function() {
             sammyApp.run('#/');
         });
-    </script>
+    </script>-->
 
 </body>
 
