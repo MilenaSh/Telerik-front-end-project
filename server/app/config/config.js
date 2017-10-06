@@ -1,5 +1,5 @@
 const config = {
-    connectionString: 'mongodb://finalproject:finalproject@ds151544.mlab.com:51544/finalproject'
+    connectionString: 'mongodb://watchmen:123456!@ds149479.mlab.com:49479/watchmen-db'
 };
 
 module.exports = { config };

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' data: fonts.gstatic.com;">-->
 
     <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -110,54 +111,8 @@
     <script src="./scripts/handlebars-v4.0.10.js"></script>
     <!--Handlebars with CDN-->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.amd.min.js"></script>-->
-    <script src="./scripts/main.js"></script>
-
-
-    <!--<script>
-        var templates = function() {
-            function get(templateName) {
-                var promise = new Promise(function(resolve, reject) {
-                    $.ajax({
-                        url: '/templates' + templateName + '.handlebars',
-                        success: function(html) {
-                            resolve(html);
-                        }
-                    });
-                });
-                return promise;
-            }
-        }
-    </script>
-
-    <script>
-        var sammyApp = Sammy('#content', function() {
-            this.get('#/', function() {
-                this.redirect('#/home');
-            });
-
-            this.get('#/home', function() {
-                $('#content').html(templates);
-            });
-
-            this.get('#/details', function() {
-                console.log('DETAILS');
-            });
-
-            this.get('#/items', function() {
-                console.log('ITEMS');
-                var items = ['1', '2', '3']
-            });
-
-            this.get('#/items/:id', function() {
-                console.log('Item with id' + this.params.id);
-                $('#content').html('Item with id' + this.params.id);
-            });
-        });
-
-        $(function() {
-            sammyApp.run('#/');
-        });
-    </script>-->
+    <!--<script src="./scripts/main.js"></script>-->
+    <script src="./scripts/script.js"></script>
 
 </body>
 

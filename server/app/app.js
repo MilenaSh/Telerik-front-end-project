@@ -29,6 +29,22 @@ const init = (data) => {
 
     // other paths go here
 
+    app.get('/missions', (request, response) => {
+        const page = +request.query.page;
+        return data.getMissions(page)
+            .then((missions) => {
+                return response.json(missions);
+            })
+    })
+
+    app.get('/missions/:id', (request, response) => {
+        const id = +request.params.id;
+        return data.getMissionById(id)
+            .then((mission) => {
+                return response.json(mission);
+            })
+    });
+
     app.get('/templates/:name', (request, response) => {
         const name = request.params.name;
         const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name + '.handlebars', 'utf-8');

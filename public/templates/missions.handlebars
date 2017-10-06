@@ -3,18 +3,19 @@
             <h1 class="above">Missions</h1>
             <div>Home>>Missions</div>
             <div id="medium">
+                {{#each missions}}
                 <section id="medium-content">
-                    <h1>Title</h1>
+                    <h1>{{title}} created by {{author}}</h1>
                     <img src="../images/border.png">
-                    <address>Posted by Admin on March 13 in Some Category | 30 Comments</address>
+                    <address>Posted by {{author}} on {{date}} | 30 Comments</address>
                     <div id="p-1">
                         <img id="box" src="">
-                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus.
-                                Phasellus tellus orci, congue at tristique at, mattis ut arcu.</p>
-                        <a href="#/" id=""><button class="btn">Read More</button></a>
+                        <p>{{description}}</p>
+                        <a href="#/missions/{{id}}" id=""><button class="btn">Read More</button></a>
                     </div>
                 </section>
-                <img class="last-border" src="../images/border-right.png">
+                {{/each}}
+                <img class="last-border" src="{{image}}">
                 <aside>
                     <div>
                         <h2>Recent Posts</h2>
@@ -33,11 +34,9 @@
                         </div>
                     </div>
                 </aside>
-
-            </div> {{!--end medium--}} 
+            </div> 
             <div id="pagination">
                 <p>Page 1 of 4</p>
             </div>
-
-        </div> {{!--end wrapper--}}
+        </div> 
     </section>

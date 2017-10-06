@@ -14,19 +14,30 @@
 }
 
 html,
-body,
-head {
+body {
     margin: 0;
     padding: 0;
     background: url("../images/BG.png");
-    height: 100%;
     width: 100%;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin-bottom: 360px;
 }
 
 header {
     margin: 0;
     padding: 0;
     height: 180px;
+}
+
+#content {
+    margin-bottom: 360px;
 }
 
 #logo {
@@ -135,6 +146,14 @@ A .container-fluid {
 /*end navigation*/
 
 
+/*CAROUSEL*/
+
+#myCarousel {
+    padding: 0;
+    margin: 0;
+}
+
+
 /* footer */
 
 
@@ -144,8 +163,12 @@ fix text spacing*/
 footer {
     padding: 0;
     margin: 0;
-    max-height: 360px;
+    height: 360px;
     background: url('../images/footer.png');
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
 #footer-content {
@@ -668,6 +691,8 @@ aside h2 {
 
 /*Responsive design*/
 
+
+/*
 @media (max-width: 960px) {
     #a-1,
     #a-2 {
@@ -721,4 +746,4 @@ aside h2 {
     .btn {
         margin-right: 40px;
     }
-}
+}*/
