@@ -90,7 +90,9 @@ var missionsController = function() {
                 context.$element().html(template());
 
             });
-    }
+    };
+
+
 
     return {
         all: all
@@ -100,6 +102,20 @@ var missionsController = function() {
 var missiondetailsController = function() {
     function all(context) {
         templates.get('missiondetails')
+            .then(function(template) {
+                context.$element().html(template());
+
+            });
+    }
+
+    return {
+        all: all
+    };
+}();
+
+var portfolioController = function() {
+    function all(context) {
+        templates.get('portfolio')
             .then(function(template) {
                 context.$element().html(template());
 
@@ -123,6 +139,7 @@ var missiondetailsController = function() {
         this.get('#/profile', profileController.all);
         this.get('#/missions', missionsController.all);
         this.get('#/details', missiondetailsController.all);
+        this.get('#/portfolio', portfolioController.all);
 
     });
     $(function() {
