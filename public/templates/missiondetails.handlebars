@@ -30,20 +30,20 @@
                 </section>
                 <section id="medium-content">
                     <div class="comments">
-                        {{#if posts}}
+                        {{#if comments}}
                         <h1>Comments</h1>
-                        <img src="../images/border.png"> {{#each posts}}
+                        <img src="../images/border.png"> {{#each comments}}
                         <div id="comment">
                             {{#if photoUrl}}
                             <img src="{{photoUrl}}" alt="userPhoto" class="user-photo"> {{else}}
                             <img src="../images/Profile_avatar_placeholder.png" alt="userPhoto" class="user-photo"> {{/if}}
                             <div class="comment-box">
-                                <h2>{{postedBy}} says: </h2>
-                                <p class="comment-p">{{message}}</p>
+                                <h2>{{author}} says: </h2>
+                                <p class="comment-p">{{content}}</p>
                                 <a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>
 
                             </div>
-                            <time>{{date}}</time> {{#if sub-comment}}
+                            <time>{{date}}</time> {{#if subcomments}}
                             <div id="sub-comment"> {{!--Start sub-comment--}}
                                 <img src="../images/0833393_b.jpg" class="user-photo sub-user-photo">
                                 <div class="comment-box sub-somment-box">

@@ -68,7 +68,6 @@ const prevPage = () => {
 
 // Sammy
 
-
 $(document).ready(() => {
     const app = Sammy('#content', (router) => {
 
@@ -191,7 +190,6 @@ $(document).ready(() => {
                 .then((mission) => {
 
                     const compiledTemplate = Handlebars.compile(rawTemplate);
-                    // const randomPost = latestPosts[Math.floor((Math.random() * (latestPosts.length - 1)) + 0)];
                     $('#content').html(compiledTemplate({
                         mission: mission
                     }));

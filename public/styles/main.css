@@ -41,7 +41,7 @@ header {
 }
 
 #logo {
-    margin-top: 60px;
+    /*margin-top: 60px;*/
     margin-bottom: 20px;
     padding: 10px;
     font-size: 36pt;
@@ -151,6 +151,8 @@ A .container-fluid {
 #myCarousel {
     padding: 0;
     margin: 0;
+    background-image: url('../images/avatar.jpeg');
+    background-repeat: repeat-x;
 }
 
 
