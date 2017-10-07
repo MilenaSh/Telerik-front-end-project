@@ -1,134 +1,195 @@
-'use strict';
+"use strict";
 
-var templates = function (params) {
-    function get(name) {
-        var promise = new Promise(function (resolve, reject) {
-            var url = 'templates/' + name + '.handlebars';
-            $.get(url, function (html) {
-                var template = Handlebars.compile(html);
-                resolve(template);
+// Requester
+
+function request(url, type, body, headers) {
+    var promise = new Promise(function (resolve, reject) {
+        return $.ajax({
+            url: url,
+            method: type,
+            data: body,
+            headers: headers,
+            contentType: 'application/json',
+            success: resolve,
+            error: reject
+        });
+    });
+    return promise;
+}
+
+function getRequest(url) {
+    var headers = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    return request(url, "GET", "", headers);
+}
+
+function postRequest(url, body) {
+    var headers = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    return request(url, 'POST', JSON.stringify(body), headers);
+}
+
+function putRequest(url, body) {
+    var headers = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    return request(url, 'PUT', JSON.stringify(body), headers);
+}
+
+function delRequest(url, body) {
+    var headers = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    return request(url, "DELETE", JSON.stringify(body), headers);
+}
+
+// get template
+
+
+var getTemplate = function getTemplate(name) {
+    var url = 'http://localhost:3000/templates/' + name;
+    return getRequest(url).then(function (template) {
+        return Promise.resolve(template);
+    });
+};
+
+var getPage = function getPage() {
+    var url = window.location.href;
+    url = url.split('page=');
+    url.shift();
+    url = url.join('');
+    url.split('&');
+    var page = url[0];
+    return +page;
+};
+
+var nextPage = function nextPage() {
+    var currentPage = getPage();
+    var newPage = currentPage + 1;
+    updateQueryStringParameter(window.location.href, 'page', newPage);
+};
+
+var prevPage = function prevPage() {
+    var currentPage = getPage();
+    var newPage = currentPage - 1;
+    if (currentPage > 1) {
+        updateQueryStringParameter(window.location.href, 'page', newPage);
+    }
+};
+
+// Sammy
+
+$(document).ready(function () {
+    var app = Sammy('#content', function (router) {
+
+        router.get('#/', function (data) {
+            var rawTemplate = void 0;
+            getTemplate('home').then(function (template) {
+                rawTemplate = template;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate());
             });
         });
-        return promise;
-    }
-    return {
-        get: get
-    };
-}();
 
-var homeController = function () {
-    $('#link-logout').hide();
-
-    function all(context) {
-        templates.get('home').then(function (template) {
-            context.$element().html(template());
+        router.get('#/home', function (data) {
+            var rawTemplate = void 0;
+            getTemplate('home').then(function (template) {
+                rawTemplate = template;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate());
+            });
         });
-    }
 
-    return {
-        all: all
-    };
-}();
-
-var aboutController = function () {
-    function all(context) {
-        templates.get('about').then(function (template) {
-            context.$element().html(template());
+        router.get('#/about', function (data) {
+            var rawTemplate = void 0;
+            getTemplate('about').then(function (template) {
+                rawTemplate = template;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate());
+            });
         });
-    }
 
-    return {
-        all: all
-    };
-}();
-
-var loginController = function () {
-    function all(context) {
-        templates.get('login').then(function (template) {
-            context.$element().html(template());
+        router.get('#/login', function (data) {
+            var rawTemplate = void 0;
+            getTemplate('login').then(function (template) {
+                rawTemplate = template;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate());
+            });
         });
-    }
 
-    return {
-        all: all
-    };
-}();
-
-var registerController = function () {
-    function all(context) {
-        templates.get('register').then(function (template) {
-            context.$element().html(template());
+        router.get('#/register', function (data) {
+            var rawTemplate = void 0;
+            getTemplate('register').then(function (template) {
+                rawTemplate = template;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate());
+            });
         });
-    }
 
-    return {
-        all: all
-    };
-}();
-
-var profileController = function () {
-    function all(context) {
-        templates.get('profile').then(function (template) {
-            context.$element().html(template());
+        router.get('#/profile', function (data) {
+            var rawTemplate = void 0;
+            getTemplate('profile').then(function (template) {
+                rawTemplate = template;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate());
+            });
         });
-    }
 
-    return {
-        all: all
-    };
-}();
-
-var missionsController = function () {
-    function all(context) {
-        templates.get('missions').then(function (template) {
-            context.$element().html(template());
+        router.get('#/portfolio', function (data) {
+            var rawTemplate = void 0;
+            getTemplate('portfolio').then(function (template) {
+                rawTemplate = template;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate());
+            });
         });
-    };
 
-    return {
-        all: all
-    };
-}();
-
-var missiondetailsController = function () {
-    function all(context) {
-        templates.get('missiondetails').then(function (template) {
-            context.$element().html(template());
+        router.get('#/missions', function (data) {
+            var page = +data.params.page;
+            if (!page) {
+                data.redirect('#/missions?page=1');
+            } else {
+                var rawTemplate = void 0;
+                getTemplate('missions').then(function (template) {
+                    rawTemplate = template;
+                    return getRequest('http://localhost:3000/missions?page=' + page);
+                }).then(function (dataObj) {
+                    var compiledTemplate = Handlebars.compile(rawTemplate);
+                    var pages = [];
+                    for (var i = 1, len = dataObj.maxPage; i <= len; i++) {
+                        pages.push(i);
+                        // pages.slice(0, 5);
+                    }
+                    var canNext = getPage() < dataObj.maxPage;
+                    var canPrev = getPage() > 1;
+                    pages = pages.slice(0, 5);
+                    console.log(dataObj);
+                    $('#content').html(compiledTemplate({
+                        missions: dataObj,
+                        pages: pages,
+                        canNext: canNext,
+                        canPrev: canPrev
+                    }));
+                });
+            }
         });
-    }
 
-    return {
-        all: all
-    };
-}();
+        // Selected mission
 
-var portfolioController = function () {
-    function all(context) {
-        templates.get('portfolio').then(function (template) {
-            context.$element().html(template());
+        router.get('#/missions/:id', function (data) {
+            var id = +data.params.id;
+            var rawTemplate = void 0;
+
+            getTemplate('missiondetails').then(function (template) {
+                rawTemplate = template;
+                return getRequest('http://localhost:3000/missions/' + id);
+            }).then(function (mission) {
+
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                $('#content').html(compiledTemplate({
+                    mission: mission
+                }));
+            });
         });
-    }
-
-    return {
-        all: all
-    };
-}();
-
-(function () {
-    var sammyApp = Sammy('#content', function () {
-        this.get('#/', function () {
-            this.redirect('#/home');
-        });
-        this.get('#/home', homeController.all);
-        this.get('#/about', aboutController.all);
-        this.get('#/login', loginController.all);
-        this.get('#/register', registerController.all);
-        this.get('#/profile', profileController.all);
-        this.get('#/missions', missionsController.all);
-        this.get('#/details', missiondetailsController.all);
-        this.get('#/portfolio', portfolioController.all);
     });
-    $(function () {
-        sammyApp.run('#/');
-    });
-})();
+    app.run('#/');
+});

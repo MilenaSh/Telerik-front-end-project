@@ -21,7 +21,10 @@ const init = (data) => {
 
     // TODO
 
-    app.use(express.static('public'));
+    app.use('/public', express.static(path.join(__dirname, '../../public')));
+    app.use(express.static(path.join(__dirname, '../../dist')));
+
+    // app.use(express.static('public')); works
     //app.use(express.static('scripts'));
 
     // app.use(express.static('node_modules'));
@@ -47,7 +50,7 @@ const init = (data) => {
 
     app.get('/templates/:name', (request, response) => {
         const name = request.params.name;
-        const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name + '.handlebars', 'utf-8');
+        const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name, 'utf-8');
         return response.json(template);
     });
 

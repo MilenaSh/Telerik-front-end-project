@@ -20,7 +20,7 @@
                     <span class="your-rating">
                   Rating: {{rating}} | Your rating: {{userVote}}
                 </span>{{/if}}
-                    <img src="../images/border.png">
+                    <img src="/public/images/border.png">
                     <address>Posted by {{postedBy}} on
                     <time>{{date}}</time> in Some Category | 30 Comments</address>
                     <div id="p-1">
@@ -32,11 +32,11 @@
                     <div class="comments">
                         {{#if comments}}
                         <h1>Comments</h1>
-                        <img src="../images/border.png"> {{#each comments}}
+                        <img src="/public/images/border.png"> {{#each comments}}
                         <div id="comment">
                             {{#if photoUrl}}
                             <img src="{{photoUrl}}" alt="userPhoto" class="user-photo"> {{else}}
-                            <img src="../images/Profile_avatar_placeholder.png" alt="userPhoto" class="user-photo"> {{/if}}
+                            <img src="/public/images/Profile_avatar_placeholder.png" alt="userPhoto" class="user-photo"> {{/if}}
                             <div class="comment-box">
                                 <h2>{{author}} says: </h2>
                                 <p class="comment-p">{{content}}</p>
@@ -45,7 +45,7 @@
                             </div>
                             <time>{{date}}</time> {{#if subcomments}}
                             <div id="sub-comment"> {{!--Start sub-comment--}}
-                                <img src="../images/0833393_b.jpg" class="user-photo sub-user-photo">
+                                <img src="/public/images/0833393_b.jpg" class="user-photo sub-user-photo">
                                 <div class="comment-box sub-somment-box">
                                     <h2>Nik Roach says: </h2>
                                     <p class="comment-p sub-comment-p">Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas
@@ -61,7 +61,7 @@
                     <a href="#/books/id/{{id}}/posts/add" class="commentLink">
                         <h1>Leave a Comment</h1>
                     </a>
-                    <img src="../images/border.png">
+                    <img src="/public/images/border.png">
                 </section>
                 <aside>
                     <div>

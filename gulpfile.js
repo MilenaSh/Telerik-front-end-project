@@ -11,7 +11,7 @@ gulp.task('compile:js', () => {
     return gulp.src(['./public/scripts/*.js',
             '!./public/scripts/handlebars-v4.0.10.js',
             '!./public/scripts/jquery-3.2.1.min.js',
-            './public/scripts/sammy-latest.min.js'
+            '!./public/scripts/sammy-latest.min.js'
         ])
         .pipe(babel({ presets: ['env'] }))
         .pipe(gulp.dest('./tеmp/scripts'));
@@ -25,7 +25,7 @@ gulp.task('minify:css', () => {
 
 gulp.task('minify:js', ['compile:js'], () => {
     return pump([
-        gulp.src('./tmp/scripts/*.js'),
+        gulp.src('./temp/scripts/*.js'),
         uglify(),
         gulp.dest('./dist/scripts')
     ]);
