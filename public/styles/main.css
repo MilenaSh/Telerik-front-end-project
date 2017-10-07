@@ -159,6 +159,7 @@ A .container-fluid {
 }
 
 #inner-carousel {
+    position: relative;
     padding: 0;
     margin: 0;
 }
