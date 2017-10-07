@@ -158,10 +158,7 @@ A .container-fluid {
 
 #image-one,
 #image-two,
-#image-three {
-    margin: auto;
-    width: 30%,
-}
+#image-three {}
 
 
 /* footer */
