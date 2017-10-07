@@ -33,8 +33,8 @@ function delRequest(url, body, headers = {}) {
 
 
 const getTemplate = (name) => {
-    // const url = 'http://localhost:3000/templates/' + name; - LOCALLY
-    const url = 'https://gooddoers.herokuapp.com/templates/' + name;
+    const url = 'http://localhost:3000/templates/' + name; // LOCALLY
+    // const url = 'https://gooddoers.herokuapp.com/templates/' + name;
     return getRequest(url)
         .then((template) => {
             return Promise.resolve(template);

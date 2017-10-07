@@ -7,19 +7,10 @@
                     <h3>{{author}} </h3>
                     <div class="tooltip">
                         <select id="example{{id}}" class="example" review-id="{{id}}" data-rating="{{rating}}">
-                    <option value=""></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
                 </select>
                         <span class="tooltiptext">Select and rate</span>
                     </div>
-                    <span id="rate"> | Rate it</span> {{#if userVote}}
-                    <span class="your-rating">
-                  Rating: {{rating}} | Your rating: {{userVote}}
-                </span>{{/if}}
+
                     <img src="/public/images/border.png">
                     <address>Posted by {{postedBy}} on
                     <time>{{date}}</time> in Some Category | 30 Comments</address>
@@ -34,31 +25,34 @@
                         <h1>Comments</h1>
                         <img src="/public/images/border.png"> {{#each comments}}
                         <div id="comment">
-                            {{#if photoUrl}}
-                            <img src="{{photoUrl}}" alt="userPhoto" class="user-photo"> {{else}}
-                            <img src="/public/images/Profile_avatar_placeholder.png" alt="userPhoto" class="user-photo"> {{/if}}
+                            {{#if image}}
+                            <img src="{{image}}" alt="userPhoto" class="user-photo"> {{else}}
+                            <img src="/public/images/avatar.jpeg" alt="userPhoto" class="user-photo"> {{/if}}
                             <div class="comment-box">
                                 <h2>{{author}} says: </h2>
                                 <p class="comment-p">{{content}}</p>
-                                <a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>
+                                {{!--<a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>--}}
+                                <a href="#/missions/{{this.id}}"><button class="btn">Comment</button></a>                                
 
                             </div>
                             <time>{{date}}</time> {{#if subcomments}}
                             <div id="sub-comment"> {{!--Start sub-comment--}}
-                                <img src="/public/images/0833393_b.jpg" class="user-photo sub-user-photo">
+                                <img src="/public/images/avatar.jpeg" class="user-photo sub-user-photo">
                                 <div class="comment-box sub-somment-box">
                                     <h2>Nik Roach says: </h2>
                                     <p class="comment-p sub-comment-p">Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas
                                         tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus
                                         lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magnaest
                                     </p>
-                                    <a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>
+                                <a href="#/missions/{{this.id}}"><button class="btn">Comment</button></a>                                                                   
+                                    {{!--<a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>--}}
                                 </div>
                                 <time>11.03.2017</time>
                             </div> {{!--End sub-comment--}} {{/if}}
                         </div> {{!--End comment--}} {{/each}} {{/if}}
                     </div> {{!--End comments--}}
-                    <a href="#/books/id/{{id}}/posts/add" class="commentLink">
+                    {{!--<a href="#/books/id/{{id}}/posts/add" class="commentLink">--}}
+                    <a href="#/missions/{{this.id}}"" class="commentLink">                    
                         <h1>Leave a Comment</h1>
                     </a>
                     <img src="/public/images/border.png">

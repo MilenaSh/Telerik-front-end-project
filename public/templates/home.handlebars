@@ -3,30 +3,34 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <!-- Wrapper for slides -->
-    
-    <div class="carousel-inner">
+
+    <div class="carousel-inner" id="inner-carousel">
         <div class="item active" id="image-one">
-            <img src="/public/images/avatar.jpeg" alt="Los Angeles">
+            <img src="/public/images/sliderImage.jpg" alt="First image">
+            <div class="image-text">Here You Can Pick a Challange!</div>
         </div>
 
         <div class="item" id="image-two">
-            <img src="/public/images/avatar.jpeg" alt="Chicago">
+            <img src="/public/images/sliderImage.jpg" alt="Second image">
+            <div class="image-text">Choose Your Mission!</div>
         </div>
 
         <div class="item" id="image-three">
-            <img src="/public/images/avatar.jpeg" alt="New York">
+            <img src="/public/images/sliderImage.jpg" alt="Third image">
+            <div class="image-text">Be a Volunteer!</div>
         </div>
-    </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev" id="slider-left">
     <span class="slider-left"> <img src="/public/images/slide-left.png" alt="left-slider"></span>
     <span class="sr-only">Previous</span>
   </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" data-slide="next" id="slider-right">
     <span class="slider-right"> <img src="/public/images/slide-right.png" alt="left-slider"></span>
     <span class="sr-only">Next</span>
   </a>
+    </div>
 </div>
 
 <!--Primary content-->
