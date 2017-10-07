@@ -33,7 +33,8 @@ function delRequest(url, body, headers = {}) {
 
 
 const getTemplate = (name) => {
-    const url = 'http://localhost:3000/templates/' + name;
+    // const url = 'http://localhost:3000/templates/' + name; - LOCALLY
+    const url = 'https://gooddoers.herokuapp.com/templates/' + name;
     return getRequest(url)
         .then((template) => {
             return Promise.resolve(template);
@@ -152,7 +153,8 @@ $(document).ready(() => {
                 getTemplate('missions')
                     .then((template) => {
                         rawTemplate = template;
-                        return getRequest('http://localhost:3000/missions?page=' + page);
+                        // return getRequest('http://localhost:3000/missions?page=' + page); LOCALLY
+                        return getRequest('https://gooddoers.herokuapp.com/missions?page=' + page);
                     })
                     .then((dataObj) => {
                         const compiledTemplate = Handlebars.compile(rawTemplate);
@@ -185,7 +187,7 @@ $(document).ready(() => {
             getTemplate('missiondetails')
                 .then((template) => {
                     rawTemplate = template;
-                    return getRequest('http://localhost:3000/missions/' + id);
+                    return getRequest('https://gooddoers.herokuapp.com/missions/' + id);
                 })
                 .then((mission) => {
 
