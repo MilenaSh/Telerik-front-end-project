@@ -17,7 +17,8 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background: url("../images/BG.png");
+    /*background: url("../images/BG.png");*/
+    background-image: -webkit-radial-gradient(center top, ellipse cover, #323A44, #11161C);
     width: 100%;
 }
 
@@ -39,6 +40,8 @@ header {
 
 #content {
     margin-bottom: 360px;
+    min-width: 100%;
+    height: 100%;
 }
 
 #logo {
@@ -56,7 +59,7 @@ header {
     margin: 0 auto;
     padding: 0;
     max-width: 960px;
-    width: 100%;
+    /*width: 100%;*/
     /*border: 1px solid yellow;*/
 }
 
@@ -168,14 +171,14 @@ A .container-fluid {
 #slider-left {
     position: absolute;
     top: 192px;
-    left: 27.5%;
+    /*left: 27.5%;*/
     background: none;
 }
 
 #slider-right {
     position: absolute;
     top: 192px;
-    right: 25%;
+    /*right: 25%;*/
     background: none;
 }
 
@@ -186,18 +189,18 @@ A .container-fluid {
     margin: 0;
     margin-top: 40px;
     margin-bottom: 67px;
-    /*position: relative;*/
+    position: relative;
     margin-left: 33%;
-    height: 335px;
-    width: 497px;
+    max-height: 335px;
+    max-width: 497px;
     box-shadow: -2px 7px 5px -4px #060809;
 }
 
 #image-one img,
 #image-two img,
 #image-three img {
-    height: 335px;
-    width: 497px;
+    max-height: 335px;
+    max-width: 497px;
 }
 
 .image-text {
@@ -211,7 +214,7 @@ A .container-fluid {
     background: -webkit-linear-gradient(left, #204751, #368491);
     box-shadow: -9px -55px 6px -5px rgba(104, 16, NaN, 1);
     border: 1px solid #537B80;
-    width: 497px;
+    width: 100%;
     padding-top: 13px;
     padding-bottom: 13px;
     padding-left: 13px;
@@ -227,8 +230,9 @@ fix text spacing*/
 footer {
     padding: 0;
     margin: 0;
-    height: 360px;
-    background: url('../images/footer.png');
+    min-height: 360px;
+    /*background: url('../images/footer.png');*/
+    background-image: -webkit-radial-gradient(center top, ellipse cover, #2E363F, #0F1319);
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -246,7 +250,7 @@ footer {
     list-style: none;
     margin-top: 50px;
     margin-bottom: 50px;
-    height: 180px;
+    min-height: 180px;
     overflow: visible;
     display: inline-block;
 }
@@ -324,7 +328,9 @@ ul#nested {
 /*footer navigation*/
 
 #nav-footer {
-    height: 62px;
+    margin: 0;
+    padding: 0;
+    min-height: 62px;
     background-color: #0f1419;
 }
 
@@ -897,6 +903,8 @@ h2 {
 }*/
 
 address {
+    padding: 0;
+    margin: 0;
     font-style: normal;
     color: #1f262d;
 }
@@ -1117,61 +1125,214 @@ aside h2 {
 }
 
 
-/*Responsive design*/
+/*RESPONSIVE*/
 
 
-/*
-@media (max-width: 960px) {
-    #a-1,
-    #a-2 {
-        width: 235px;
-    }
-    #nav {
-        width: 900px;
-    }
-}
-
-@media (max-width: 768px) {
-    #nav {
-        max-width: 720px;
-    }
-    aside {
-        display: none;
-    }
-    #medium {
-        margin-left: 5%;
-    }
-}
+/* Smartphones (portrait and landscape) ----------- */
 
 @media (max-width: 480px) {
-    #nav {
-        max-width: 480px;
-        padding-left: 15px;
-    }
-    #medium {
-        margin-left: 0;
-    }
-    #p-1 {
+    /*CAROUSEL*/
+    #myCarousel {
         max-width: 480px;
     }
-    #box {
-        width: 150px;
-        height: 155px;
+    /*Features*/
+    /*#content {
+        min-width: 120%;
+    }*/
+    #features-list {
+        margin-left: 30px;
+        height: 360px;
+        overflow: hidden;
     }
-    #medium-content p {
-        max-width: 280px;
-        max-height: 155px;
+    #features-list>li {
+        margin-top: 10px;
+        margin-bottom: 12px;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
     }
-    address {
+    .f-1 {
+        float: none;
+    }
+    #features-list h2 {
+        margin-bottom: 2px;
+    }
+    #features-list li p {
+        width: 300px;
+        height: 75px;
+        overflow: hidden;
+    }
+    #f-1,
+    #f-2,
+    #f-3 {
+        margin-right: 15px;
+        margin-left: 50px;
+        width: 38px;
+        height: 38px;
+    }
+    .f-1>form {
+        width: 20px;
+        /*position: absolute;*/
+        left: 400px;
+    }
+    .read-more {
+        margin: 0;
+        padding: 0;
+        margin-top: 5px;
+    }
+    #quote {
+        left: 225px;
+    }
+    #additional-info {
+        left: 152px;
+    }
+    #info p {
+        width: 460px;
+        margin-top: 5px;
+        font-size: 22px;
+    }
+    .work>li {
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+    .work {
+        height: 240px;
+        width: 480px;
+    }
+    /*Footer*/
+    /*#footer {
+        display: none;
+    }
+    #nav-footer {
+        display: none;
+    }*/
+    #footer-content {
         max-width: 480px;
-        font-size: 12px;
     }
-    .last-border {
-        bottom: 30%;
-        left: 20%;
-        max-width: 400px;
+    #footer-content>li {
+        display: inline-block;
+        width: 400px;
+        height: 100px;
+        overflow: hidden;
+        margin-left: 40px;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
-    .btn {
-        margin-right: 40px;
+    #footer-content>li>p {
+        margin-top: -8px;
+        line-height: 120%;
     }
-}*/
+    #nested li {
+        margin-bottom: 3px;
+    }
+    .foo-2>h2 {
+        margin-bottom: 5px !important;
+    }
+    #nav-footer>.wrapper {
+        width: 480px;
+    }
+    #nav-footer ul {
+        height: 20px;
+        margin-left: 70px;
+    }
+    #nav-footer ul li {
+        display: inline-block;
+        list-style-type: none;
+        margin: 5px 15px 0 0;
+    }
+    small {
+        margin-right: 10px;
+    }
+    /*MISSIONS*/
+    /*Responsive design*/
+    @media (max-width: 960px) {
+        #a-1,
+        #a-2 {
+            width: 235px;
+        }
+        #nav {
+            width: 900px;
+        }
+    }
+    @media (max-width: 768px) {
+        #nav {
+            max-width: 720px;
+        }
+        aside {
+            display: none;
+        }
+        #medium {
+            margin-left: 5%;
+        }
+    }
+    @media (max-width: 480px) {
+        #nav {
+            max-width: 480px;
+            padding-left: 15px;
+        }
+        #medium {
+            margin-left: 0;
+        }
+        #p-1 {
+            max-width: 480px;
+        }
+        #box {
+            width: 150px;
+            height: 155px;
+        }
+        #medium-content p {
+            max-width: 280px;
+            max-height: 155px;
+        }
+        address {
+            max-width: 480px;
+            font-size: 12px;
+        }
+        .last-border {
+            bottom: 30%;
+            left: 20%;
+            max-width: 400px;
+        }
+        .btn {
+            margin-right: 40px;
+        }
+    }
+    /*MISSION DETAILS*/
+    @media (max-width: 480px) {
+        .comment-box {
+            max-width: 400px;
+            max-height: 150px;
+            background-size: 400px 150px;
+            margin-left: 12%;
+        }
+        .user-photo {
+            border: 3px solid white;
+            max-width: 54px;
+            max-height: 54px;
+        }
+        #comment time {
+            margin-top: -85px;
+            margin-left: 2%;
+        }
+        #comment>div.comment-box>p {
+            max-width: 350px !important;
+            max-height: 75px;
+        }
+        .comment-box .btn {
+            font-size: 9px;
+            padding: 3px 5px 3px 5px;
+        }
+        .sub-somment-box {
+            max-width: 330px;
+            background-size: 330px 150px;
+        }
+        .sub-somment-box .sub-comment-p {
+            max-width: 295px !important;
+            max-height: 75px !important;
+            margin-top: 14% !important;
+        }
+        .sub-somment-box .btn {
+            margin-top: 37%;
+        }
+    }
+}
