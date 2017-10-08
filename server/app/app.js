@@ -48,6 +48,22 @@ const init = (data) => {
             })
     });
 
+    app.get('/photos', (request, response) => {
+        const page = +request.query.page;
+        return data.getPhotos(page)
+            .then((photos) => {
+                return response.json(photos);
+            })
+    })
+
+    app.get('/photo/:id', (request, response) => {
+        const id = +request.params.id;
+        return data.getPhotoById(id)
+            .then((photo) => {
+                return response.json(photo);
+            })
+    });
+
     app.get('/templates/:name', (request, response) => {
         const name = request.params.name;
         // const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name, 'utf-8'); - LOCALLY

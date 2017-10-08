@@ -1,11 +1,12 @@
 <div id="features">
     <div id="recent-work">
         <div class="wrapper-center">
+            {{#each photos}}
             <ul class="work">
                 <li>
-                    <div class="work-box"></div>
+                    <div ><img class="work-box" src="{{image}}" alt=""></div>
                 </li>
-                <li>
+                {{!--<li>
                     <div class="work-box"></div>
                 </li>
                 <li>
@@ -46,8 +47,9 @@
                 </li>
                 <li class="last">
                     <div class="work-box"></div>
-                </li>
+                </li>--}}
             </ul>
+            {{/each}}
         </div>
     </div>
 </div>

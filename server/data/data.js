@@ -27,7 +27,33 @@ const init = (db) => {
             })
     };
 
-    const data = { getMissions, getMissionById };
+    const getPhotos = (page) => {
+        return db.collection('finalproject-photos')
+            .find()
+            .toArray()
+            .then((photos) => {
+                const photosLength = photos.length;
+                const MissionsPerPage = 15;
+                if (page) {
+                    photos = photos.slice((page - 1) * PhotosPerPage, page * PhotosPerPage);
+                }
+                const result = {
+                    photos: photos,
+                    maxPage: Math.ceil(photosLength / PhotosPerPage)
+                };
+                return Promise.resolve(photos);
+            })
+    };
+
+    const getPhotoById = (id) => {
+        return db.collection('finalproject-photos')
+            .findOne({ 'id': id })
+            .then((photo) => {
+                return Promise.resolve(photo);
+            })
+    };
+
+    const data = { getMissions, getMissionById, getPhotos, getPhotoById };
 
     return Promise.resolve(data);
 }

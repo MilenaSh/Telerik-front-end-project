@@ -530,8 +530,8 @@ li#last p {
 /*INDEX*/
 
 #primary-content h1 {
-    font-family: 'colaborate-thinregular';
-    font-size: 28px;
+    font-family: ColaborateThin;
+    font-size: 30px;
 }
 
 .above {
@@ -560,6 +560,8 @@ h2 {
     margin: 0;
     padding: 0;
     color: #1f262d;
+    /*font-family: ColaborateThin;
+    font-size: 50px;*/
 }
 
 #medium-content {
@@ -653,7 +655,7 @@ aside {
 }
 
 aside h2 {
-    font-family: 'colaborate-thinregular';
+    font-family: ColaborateThin;
 }
 
 #a-1,
@@ -729,7 +731,7 @@ aside h2 {
     text-decoration: none;
     background-color: white;
     border-radius: 8px;
-    font-family: 'colaborate-thinregular';
+    font-family: ColaborateThin;
     margin: 5px;
 }
 
@@ -737,7 +739,7 @@ aside h2 {
     background-color: #2B323B;
     color: white;
     border-radius: 8px;
-    font-family: 'colaborate-thinregular';
+    font-family: ColaborateThin;
 }
 
 
@@ -751,7 +753,7 @@ aside h2 {
 .user-photo .sub-user-photo {}
 
 #primary-content h1 {
-    font-family: 'colaborate-thinregular';
+    font-family: ColaborateThin;
     font-size: 28px;
 }
 
@@ -840,13 +842,20 @@ address {
 /*MISSIONS LISTING*/
 
 #primary-content h1 {
-    font-family: 'colaborate-thinregular';
-    font-size: 28px;
+    font-family: ColaborateThin;
+    font-size: 30px;
+}
+
+#missions-path {
+    font-family: DroidSans;
+    font-size: 12px;
+    color: #7E7D7D;
+    margin-top: 28px;
 }
 
 .above {
     color: white;
-    top: -70px;
+    top: -72px;
     position: absolute;
 }
 
@@ -963,7 +972,7 @@ aside {
 }
 
 aside h2 {
-    font-family: 'colaborate-thinregular';
+    font-family: ColaborateThin;
 }
 
 #a-1,

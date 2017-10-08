@@ -133,15 +133,49 @@ $(document).ready(() => {
                 })
         })
 
-        router.get('#/portfolio', (data) => {
-            let rawTemplate;
-            getTemplate('portfolio')
-                .then((template) => {
-                    rawTemplate = template;
-                    const compiledTemplate = Handlebars.compile(rawTemplate);
-                    $('#content').html(compiledTemplate());
-                })
-        })
+        // router.get('#/portfolio', (data) => {
+        //     let rawTemplate;
+        //     getTemplate('portfolio')
+        //         .then((template) => {
+        //             rawTemplate = template;
+        //             const compiledTemplate = Handlebars.compile(rawTemplate);
+        //             $('#content').html(compiledTemplate());
+        //         })
+        // })
+
+        router.get('#/photos', (data) => {
+            const page = +data.params.page;
+            if (!page) {
+                data.redirect('#/photos?page=1');
+            } else {
+                let rawTemplate;
+                getTemplate('portfolio')
+                    .then((template) => {
+                        rawTemplate = template;
+                        // return getRequest('http://localhost:3000/missions?page=' + page); LOCALLY
+                        return getRequest('https://gooddoers.herokuapp.com/missions?page=' + page);
+                    })
+                    .then((dataObj) => {
+                        const compiledTemplate = Handlebars.compile(rawTemplate);
+                        let pages = [];
+                        for (let i = 1, len = dataObj.maxPage; i <= len; i++) {
+                            pages.push(i);
+                            // pages.slice(0, 5);
+                        }
+                        const canNext = getPage() < dataObj.maxPage;
+                        const canPrev = getPage() > 1;
+                        pages = pages.slice(0, 5);
+                        console.log(dataObj);
+                        $('#content').html(compiledTemplate({
+                            photos: dataObj,
+                            pages: pages,
+                            canNext: canNext,
+                            canPrev: canPrev
+                        }));
+
+                    });
+            }
+        });
 
 
         router.get('#/missions', (data) => {
