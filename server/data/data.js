@@ -33,7 +33,7 @@ const init = (db) => {
             .toArray()
             .then((photos) => {
                 const photosLength = photos.length;
-                const MissionsPerPage = 15;
+                const PhotosPerPage = 15;
                 if (page) {
                     photos = photos.slice((page - 1) * PhotosPerPage, page * PhotosPerPage);
                 }

@@ -800,6 +800,8 @@ h3 {
 
 address {
     font-style: normal;
+    font-family: ColaborateThin;
+    font-size: 18px;
     color: #1f262d;
 }
 
@@ -825,7 +827,7 @@ address {
     height: 224px;
     overflow: hidden;
     font-family: DroidSans;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 140%;
     color: #838383;
     margin: 0;
@@ -870,7 +872,8 @@ address {
 }
 
 #medium {
-    margin-top: 88px;
+    padding: 0;
+    margin-top: 30px;
     height: 100%;
 }
 
@@ -968,7 +971,7 @@ aside {
     height: 625px;
     display: inline-block;
     position: absolute;
-    top: 90px;
+    top: 80px;
 }
 
 aside h2 {

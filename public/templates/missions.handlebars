@@ -1,6 +1,6 @@
 <section id="primary-content">
     <div class="wrapper-center">
-        <h1 class="above">Missions That You Can Choose From</h1>
+        <h1 class="above">Missions You Can Choose</h1>
         <div id="missions-path">Home >> Missions That You Can Choose From</div>
         <div id="medium">
             {{#each missions}}
@@ -9,45 +9,39 @@
                 <img src="/public/images/border.png">
                 <address>Posted by {{author}} on {{date}} | 30 Comments</address>
                 <div id="p-1">
-                    <img id="box" src="">
+                    <img id="box" src="{{image}}">
                     <p>{{description}}</p>
                     <a href="#/missions/{{id}}" id=""><button class="btn">Read More</button></a>
                 </div>
             </section>
-            {{/each}}
-            <img class="last-border" src="{{image}}">
+            <img class="last-border" src="/public/images/border-right.png">
             <aside>
                 <div>
                     <h2>Recent Missions</h2>
                     <div id="a-1">
-                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi
-                            lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit
-                            amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut
-                            arcu.
+                        <p>{{description}}
                         </p>
                     </div>
                 </div>
                 <div>
                     <h2 id="second-h2">Recent Missions</h2>
                     <div id="a-2">
-                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi
-                            lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit
-                            amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut
-                            arcu.
+                        <p>{{description}}
                         </p>
                     </div>
                 </div>
             </aside>
         </div>
+        {{/each}}
         <div id="pagination">
             <div class="pagination">
                 <p>Page 1 of 4</p>
                 <a href="#/missions?page=1">1</a>
                 <a href="#/missions?page=2" class="active">2</a>
                 <a href="#/missions?page=3">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
+                <a href="#/missions?page=4">4</a>
+                <a href="#/missions?page=5">5</a>
+                <a href="#/missions?page=6">6</a>
             </div>
         </div>
     </div>

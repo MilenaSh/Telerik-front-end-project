@@ -152,8 +152,8 @@ $(document).ready(() => {
                 getTemplate('portfolio')
                     .then((template) => {
                         rawTemplate = template;
-                        // return getRequest('http://localhost:3000/missions?page=' + page); LOCALLY
-                        return getRequest('https://gooddoers.herokuapp.com/missions?page=' + page);
+                        return getRequest('http://localhost:3000/photos?page=' + page); // LOCALLY
+                        // return getRequest('https://gooddoers.herokuapp.com/photos?page=' + page);
                     })
                     .then((dataObj) => {
                         const compiledTemplate = Handlebars.compile(rawTemplate);
