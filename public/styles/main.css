@@ -980,7 +980,7 @@ aside h2 {
 /*RESPONSIVE*/
 
 
-/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones  */
 
 @media (max-width: 480px) {
     #nav,
@@ -1030,6 +1030,7 @@ aside h2 {
     
 /*end navigation for mobile*/
 
+/* HOME PAGE */
 
     /*CAROUSEL*/
 
@@ -1196,10 +1197,11 @@ aside h2 {
         display: none;
     }*/
 
-    /* footer {
+     /* footer {
         height: -200px !important;
         margin-bottom: -300px;
-    } */
+    }  */
+
     #footer-content {
         display:none;
         /* max-width: 460px;
@@ -1261,6 +1263,90 @@ aside h2 {
 
     /*MISSIONS*/
     /*Responsive design*/
+
+    /* Mobile */
+
+    @media (max-width: 480px) {
+
+        #nav {
+            padding-left: 15px;
+        }
+        #medium {
+            margin-left: 0;
+            max-width: 300px;
+        }
+
+        #primary-content {
+            height: 1100px;
+            max-width: 100%;
+            margin-top: 80px;
+            margin-bottom: -300px;
+            box-shadow: 0 -25px 25px -25px black;
+            position: relative;
+        }
+
+        #primary-content h1 {
+            padding: 0;
+            font-size: 22px;
+            margin-left: 20px;
+        }
+
+        #missions-path {
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 10px;
+        }
+        #p-1 {
+            max-width: 400px;
+        }
+        #box {
+            width: 150px;
+            height: 155px;
+            margin-bottom: 10px;
+        }
+
+        #medium-content {
+            max-width: 380px;
+            margin-right: 35px;
+        }
+
+        #medium-content img{
+            max-width: 380px;
+        }
+
+        #medium-content h1 {
+            max-width: 280px;
+            max-height: 155px;
+            font-size: 20px;
+        }
+
+        #medium-content p {
+            max-width: 280px;
+            max-height: 155px;
+        }
+        address {
+            max-width: 380px;
+            font-size: 12px;
+        }
+        .last-border {
+            bottom: 30%;
+            left: 5%;
+            max-width: 200px;
+        }
+        .btn {
+            margin-top: 150px;
+            margin-left: -150px;
+            float: left;
+        }
+
+        #pagination {
+            float: right;
+            top: 90%;
+            right: 10%;
+        }
+    }
+
+
     @media (max-width: 960px) {
         #a-1,
         #a-2 {
@@ -1268,6 +1354,9 @@ aside h2 {
         }
         #nav {
             width: 900px;
+        }
+        aside {
+            display: none;
         }
     }
     @media (max-width: 768px) {
@@ -1281,38 +1370,7 @@ aside h2 {
             margin-left: 5%;
         }
     }
-    @media (max-width: 480px) {
-        #nav {
-            max-width: 480px;
-            padding-left: 15px;
-        }
-        #medium {
-            margin-left: 0;
-        }
-        #p-1 {
-            max-width: 480px;
-        }
-        #box {
-            width: 150px;
-            height: 155px;
-        }
-        #medium-content p {
-            max-width: 280px;
-            max-height: 155px;
-        }
-        address {
-            max-width: 480px;
-            font-size: 12px;
-        }
-        .last-border {
-            bottom: 30%;
-            left: 20%;
-            max-width: 400px;
-        }
-        .btn {
-            margin-right: 40px;
-        }
-    }
+   
     /*MISSION DETAILS - RESPONSIVE*/
     @media (max-width: 480px) {
         .comment-box {
