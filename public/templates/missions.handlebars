@@ -10,11 +10,10 @@
                 <address>Posted by {{author}} on {{date}} | 30 Comments</address>
                 <div id="p-1">
                     <img id="box" src="{{image}}">
-                    <p id="description">{{description}}</p>
+                    <div id="description"><p>{{description}}</p></div>
                     <a href="#/missions/{{id}}" id=""><button class="btn">Read More</button></a>
                 </div>
             </section>
-            <img class="last-border" src="/public/images/border-right.png">
             <aside>
                 <div>
                     <h2>Recent Missions</h2>
@@ -33,15 +32,16 @@
             </aside>
         </div>
         {{/each}}
+                    <img class="last-border" src="/public/images/border-right.png">
         <div id="pagination">
             <div class="pagination">
                 <p>Page 1 of 4</p>
-                <a href="#/missions?page=1">1</a>
-                <a href="#/missions?page=2" class="active">2</a>
-                <a href="#/missions?page=3">3</a>
-                <a href="#/missions?page=4">4</a>
-                <a href="#/missions?page=5">5</a>
-                <a href="#/missions?page=6">6</a>
+                <a class="page" href="#/missions?page=1">1</a>
+                <a class="page" href="#/missions?page=2">2</a>
+                <a class="page" href="#/missions?page=3">3</a>
+                <a class="page" href="#/missions?page=4">4</a>
+                {{!--<a href="#/missions?page=5">5</a>
+                <a href="#/missions?page=6">6</a>--}}
             </div>
         </div>
     </div>

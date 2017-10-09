@@ -726,10 +726,9 @@ address {
 
 #p-1>p {
     margin-top: 15px;
-    width: 616px;
+    max-width: 616px;
     font-family: DroidSans;
     font-size: 18px;
-    color: black
 }
 
 #box {
@@ -774,7 +773,8 @@ address {
     padding: 5px 8px 5px 8px;
     border: solid #050505 1px;
     margin: 15px 10px 13px 0;
-    width: inherit;
+    width: 80px;
+    height: 25px;
 }
 
 .btn:hover {
@@ -799,7 +799,7 @@ aside h2 {
 #a-1,
 #a-2 {
     margin-top: 13px;
-    width: 268px;
+    max-width: 268px;
     background: #fefefe;
     border: 0.5px solid #cfcfcf;
     border-top: 2px solid #cfcfcf;
@@ -820,7 +820,7 @@ aside h2 {
 }
 
 #a-1 p {
-    line-height: 145%;
+    line-height: 20px;
     height: 139px;
     padding: 20px;
 }
@@ -834,15 +834,16 @@ aside h2 {
 }
 
 #a-2 p {
-    height: 205px;
+    height: 240px;
     padding: 30px;
     line-height: 230%;
 }
 
 .last-border {
-    position: absolute;
-    bottom: 395px;
-    left: 260px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    padding-left: 20%;
 }
 
 
@@ -871,9 +872,10 @@ aside h2 {
     border-radius: 8px;
     font-family: ColaborateThin;
     margin: 5px;
+    border: .5px solid #C5C5C5;
 }
 
-#pagination a.active {
+#pagination a:active {
     background-color: #2B323B;
     color: white;
     border-radius: 8px;
