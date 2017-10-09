@@ -23,13 +23,13 @@ body {
 }
 
 html {
-    min-height: 100%;
+  
     position: relative;
 }
-
+/* 
 body {
     margin-bottom: 360px;
-}
+} */
 
 header {
     margin: 0;
@@ -1074,6 +1074,12 @@ aside h2 {
     /*#content {
         min-width: 120%;
     }*/
+
+    #features {
+        height: 1300px;
+        margin-bottom: -300px;
+    }
+
     #features-list {
         width: 100%;
         margin-left: 30px;
@@ -1151,42 +1157,97 @@ aside h2 {
     }
 
 
+    /* Gallery boxes */
+
+    .wrapper-gallery {
+        max-width: 380px;
+    }
+
+    #recent-work {
+        padding: 0;
+        margin: 0;
+    }
     
+    .work>li {
+        padding: 0;
+        margin: 0;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .work-box {
+        width: 150px;
+        height: 104px;
+    }
+
+    /* #recent-work {
+        display: none;
+    } */
+
+
+
     /*Footer*/
-    /*#footer {
+    #footer {
         display: none;
     }
-    #nav-footer {
+   
+   /* #nav-footer {
         display: none;
     }*/
+
+    /* footer {
+        height: -200px !important;
+        margin-bottom: -300px;
+    } */
     #footer-content {
-        max-width: 480px;
+        display:none;
+        /* max-width: 460px;
+        max-height: -200px; */
     }
-    #footer-content>li {
+
+    /* #footer-content>li {
+        margin:0;
+        padding: 0;
         display: inline-block;
-        width: 400px;
-        height: 100px;
+        width: 70px;
+        height: 50px;
         overflow: hidden;
-        margin-left: 40px;
+
         margin-top: 10px;
         margin-bottom: 0;
     }
     #footer-content>li>p {
+        margin: 0;
+        padding: 0;
         margin-top: -8px;
-        line-height: 120%;
+        line-height: 100%;
     }
     #nested li {
         margin-bottom: 3px;
     }
+
+    .foo-2 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
     .foo-2>h2 {
         margin-bottom: 5px !important;
-    }
-    #nav-footer>.wrapper {
+    } */
+    /* #nav-footer>.wrapper {
         width: 480px;
+    } */
+
+     #nav-footer {
+        
+        margin:0;
+        margin-bottom: -500px;
+        padding: 0;
     }
+
     #nav-footer ul {
         height: 20px;
-        margin-left: 70px;
+        margin-left: 20px;
     }
     #nav-footer ul li {
         display: inline-block;
@@ -1195,7 +1256,9 @@ aside h2 {
     }
     small {
         margin-right: 10px;
-    }
+    } 
+
+
     /*MISSIONS*/
     /*Responsive design*/
     @media (max-width: 960px) {
