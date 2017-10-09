@@ -974,6 +974,37 @@ aside h2 {
 
 /*RESPONSIVE*/
 
+@media (max-width: 960px) {
+    #a-1,
+    #a-2 {
+        width: 235px;
+    }
+    #nav {
+        width: 900px;
+    }
+    /* aside {
+        display: none;
+    } */
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav {
+        max-width: 720px;
+    }
+    aside {
+        display: none;
+    }
+    #medium {
+        margin-left: 5%;
+    }
+    footer {
+        display: none;
+    }
+
+}
 
 /* Smartphones  */
 
@@ -1339,28 +1370,6 @@ aside h2 {
             top: 90%;
             right: 10%;
         }
-    }
-
-    @media (max-width: 768px) {
-        #nav {
-            max-width: 720px;
-        }
-        aside {
-            display: none;
-        }
-        #medium {
-            margin-left: 5%;
-        }
-    }
-
-    @media (max-width: 960px) {
-        #a-1,
-        #a-2 {
-            width: 235px;
-        }
-        #nav {
-            width: 900px;
-        }
         aside {
             display: none;
         }
@@ -1416,4 +1425,6 @@ aside h2 {
             display: none;
         }
     }
+
+
 }
