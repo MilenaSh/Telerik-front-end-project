@@ -975,12 +975,50 @@ aside h2 {
 /*RESPONSIVE*/
 
 @media (max-width: 960px) {
+    #nav {
+        max-width: 900px;
+    }
+
+    #myCarousel {
+        max-width: 900px;
+        height: 300px;
+        padding: 0;
+        margin: 0;
+        /* background-image: none; */
+
+    }
+
+    .image-text {
+        display: none;
+          }
+
+    #image-one,
+    #image-two,
+    #image-three {
+        margin: 0;
+        padding: 0;
+        margin-left: 20%;
+        margin-top: 0;
+        max-height: 290px;
+        max-width: 900px;
+    }
+
+    #slider-left,
+    #slider-right {
+        display: none;
+    }
+
     #a-1,
     #a-2 {
         width: 235px;
     }
     #nav {
         width: 900px;
+    }
+
+    #features {
+        height: 1300px;
+        margin-bottom: -300px;
     }
     /* aside {
         display: none;
@@ -990,10 +1028,45 @@ aside h2 {
     }
 }
 
+@media (max-width: 900px) {
+    #nav {
+        max-width: 800px;
+    }
+    /* #a-1,
+    #a-2 {
+        width: 235px;
+    } */
+    /* aside {
+        display: none;
+    } */
+
+}
+
 @media (max-width: 768px) {
     #nav {
         max-width: 720px;
     }
+
+    #myCarousel {
+        max-width: 800px;
+        height: 300px;
+        padding: 0;
+        margin: 0;
+        /* background-image: none; */
+
+    }
+
+    #image-one img,
+    #image-two img,
+    #image-three img {
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 0;
+        max-height: 300px;
+        max-width: 700px;
+    }
+
     aside {
         display: none;
     }
@@ -1002,6 +1075,50 @@ aside h2 {
     }
     footer {
         display: none;
+    }
+
+}
+
+@media (max-width: 650px) {
+    #nav {
+        max-width: 600px !important;
+    }
+
+    /* #myCarousel {
+        max-width: 500px;
+        height: 250px;
+        padding: 0;
+        margin: 0;
+        
+
+    } */
+
+    #image-one img,
+    #image-two img,
+    #image-three img {
+        margin: 0;
+        padding: 0;
+        margin-left: -10%;
+        margin-top: 0;
+        max-height: 300px;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 550px) {
+    #nav {
+        max-width: 500px;
+    }
+
+    #image-one img,
+    #image-two img,
+    #image-three img {
+        margin: 0;
+        padding: 0;
+        margin-left: -15%;
+        margin-top: 0;
+        max-height: 280px;
+        max-width: 500px;
     }
 
 }
@@ -1024,7 +1141,7 @@ aside h2 {
         /* Fixed width */
 
     #nav {
-        max-width: 360px !important;
+        max-width: 390px !important;
     }
 
     #nav li a {
@@ -1089,6 +1206,7 @@ aside h2 {
     #image-one img,
     #image-two img,
     #image-three img {
+        margin:0;
         max-height: 250px;
         max-width: 400px;
     }

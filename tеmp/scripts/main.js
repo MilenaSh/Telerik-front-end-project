@@ -2,6 +2,7 @@
 
 // Requester
 
+
 function request(url, type, body, headers) {
     var promise = new Promise(function (resolve, reject) {
         return $.ajax({
@@ -45,8 +46,8 @@ function delRequest(url, body) {
 
 
 var getTemplate = function getTemplate(name) {
-    var url = 'http://localhost:3000/templates/' + name; // LOCALLY
-    // const url = 'https://gooddoers.herokuapp.com/templates/' + name;
+    var url = 'http://localhost:3000/templates/' + name; //LOCALLY
+    //  const url = 'https://gooddoers.herokuapp.com/templates/' + name; //HEROKU
     return getRequest(url).then(function (template) {
         return Promise.resolve(template);
     });
@@ -135,13 +136,45 @@ $(document).ready(function () {
             });
         });
 
-        router.get('#/portfolio', function (data) {
-            var rawTemplate = void 0;
-            getTemplate('portfolio').then(function (template) {
-                rawTemplate = template;
-                var compiledTemplate = Handlebars.compile(rawTemplate);
-                $('#content').html(compiledTemplate());
-            });
+        // router.get('#/portfolio', (data) => {
+        //     let rawTemplate;
+        //     getTemplate('portfolio')
+        //         .then((template) => {
+        //             rawTemplate = template;
+        //             const compiledTemplate = Handlebars.compile(rawTemplate);
+        //             $('#content').html(compiledTemplate());
+        //         })
+        // })
+
+        router.get('#/photos', function (data) {
+            var page = +data.params.page;
+            if (!page) {
+                data.redirect('#/photos?page=1');
+            } else {
+                var rawTemplate = void 0;
+                getTemplate('portfolio').then(function (template) {
+                    rawTemplate = template;
+                    return getRequest('http://localhost:3000/photos?page=' + page); // LOCALLY
+                    // return getRequest('https://gooddoers.herokuapp.com/photos?page=' + page); // HEROKU
+                }).then(function (dataObj) {
+                    var compiledTemplate = Handlebars.compile(rawTemplate);
+                    var pages = [];
+                    for (var i = 1, len = dataObj.maxPage; i <= len; i++) {
+                        pages.push(i);
+                        // pages.slice(0, 5);
+                    }
+                    var canNext = getPage() < dataObj.maxPage;
+                    var canPrev = getPage() > 1;
+                    pages = pages.slice(0, 5);
+                    console.log(dataObj);
+                    $('#content').html(compiledTemplate({
+                        photos: dataObj,
+                        pages: pages,
+                        canNext: canNext,
+                        canPrev: canPrev
+                    }));
+                });
+            }
         });
 
         router.get('#/missions', function (data) {
@@ -152,8 +185,8 @@ $(document).ready(function () {
                 var rawTemplate = void 0;
                 getTemplate('missions').then(function (template) {
                     rawTemplate = template;
-                    // return getRequest('http://localhost:3000/missions?page=' + page); LOCALLY
-                    return getRequest('https://gooddoers.herokuapp.com/missions?page=' + page);
+                    return getRequest('http://localhost:3000/missions?page=' + page); // LOCALLY
+                    //return getRequest('https://gooddoers.herokuapp.com/missions?page=' + page); // HEROKU
                 }).then(function (dataObj) {
                     var compiledTemplate = Handlebars.compile(rawTemplate);
                     var pages = [];
