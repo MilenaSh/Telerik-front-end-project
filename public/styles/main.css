@@ -886,13 +886,15 @@ aside h2 {
 /*Comments*/
 
 .comments {
-    margin-top: 85px;
+    padding: 0;
+    margin: 0;
+    margin-top: 75px;
     margin-bottom: 51px;
 }
 
 .user-photo {
-    width: 61px;
-    height: 61px;
+    width: 69px;
+    height: 68px;
     margin-left: 2%;
     margin-top: 0 !important;
     float: left;
@@ -903,14 +905,14 @@ aside h2 {
 }
 
 #comment {
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 #comment time {
     color: #5e5e5e;
     font-family: DroidSans;
     font-size: 11px;
-    margin-top: -110px;
+    margin-top: -125px;
     margin-left: 4%;
     float: left;
 }
