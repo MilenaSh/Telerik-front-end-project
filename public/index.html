@@ -7,17 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' data: fonts.gstatic.com;">-->
 
-    <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- <link rel="stylesheet" href=" ../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/styles/main.css">
     <link rel="stylesheet" href="/public/styles/login.css">
     <link rel="stylesheet" href="/public/styles/register.css">
-    <link rel="stylesheet" href="/public/styles/profile.css"> 
-    
+    <link rel="stylesheet" href="/public/styles/profile.css">
 
     <title>GoodDoers</title>
 </head>
@@ -25,42 +22,66 @@
 <body>
     <header>
         <div class="wrapper-center">
-            <div id="logo"> <img src="/public/images/mylogo.png" alt="Logo"></div>
-            <nav class="navbar navbar-inverse" id="nav">
+            <div id="logo">
+                <img src="/public/images/mylogo.png" alt="Logo">
+            </div>
+            <div class="navbar navbar-inverse" id="nav">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse" id="navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#/">Home</a></li>
-                            <li><a href="#/profile">Profile</a></li>
-                            <li><a href="#/about">About Us</a></li>
-                            <li><a href="#/missions">Missions</a></li>
-                            <li><a href="#/photos">Gallery</a></li>
-                            <li><a href="#/login">Login</a></li>
-                            <li><a href="#" id="link-logout">Log out</a></li>
-                            <li><a href="#/register">Register</a></li>
+                    <nav class="collapse navbar-collapse" role="navigation" >
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <a href="#/">Home</a>
+                            </li>
+                            <li>
+                                <a href="#/profile">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#/about">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#/missions">Missions</a>
+                            </li>
+                            <li>
+                                <a href="#/photos">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#/login">Login</a>
+                            </li>
+                            <li>
+                                <a href="#" id="link-logout">Log out</a>
+                            </li>
+                            <li>
+                                <a href="#/register">Register</a>
+                            </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="share">
-                                <a href="#" class="share-icon"><img src="/public/images/twitter.png" alt="Twitter-icon"></a>
+                                <a href="#" class="share-icon">
+                                    <img src="/public/images/twitter.png" alt="Twitter-icon">
+                                </a>
                             </li>
                             <li class="share">
-                                <a href="#" class="share-icon"><img src="/public/images/rss.png" alt="rss-icon"></a>
+                                <a href="#" class="share-icon">
+                                    <img src="/public/images/rss.png" alt="rss-icon">
+                                </a>
                             </li>
                             <li class="share">
-                                <a href="#" class="share-icon"><img src="/public/images/facebook.png" alt="facebook-icon"></a>
+                                <a href="#" class="share-icon">
+                                    <img src="/public/images/facebook.png" alt="facebook-icon">
+                                </a>
                             </li>
-
                         </ul>
-                    </div>
-            </nav>
+                    </nav>
+                </div>
             </div>
     </header>
 
@@ -72,8 +93,10 @@
             <ul id="footer-content">
                 <li class="foo-1">
                     <h2>Who We Are</h2>
-                    <p>We believe everyone should have the chance to make a difference. That's why we make it easy for good people and good causes to connect. We've connected millions of people with a great place to volunteer and helped tens of thousands
-                        of organizations better leverage volunteers to create real impact. f organizations better leverage volunteers to create real impact. </p>
+                    <p>We believe everyone should have the chance to make a difference. That's why we make it easy for good
+                        people and good causes to connect. We've connected millions of people with a great place to volunteer
+                        and helped tens of thousands of organizations better leverage volunteers to create real impact. f
+                        organizations better leverage volunteers to create real impact. </p>
                 </li>
 
                 <li class="foo-2">
@@ -89,19 +112,31 @@
                 </li>
                 <li class="last">
                     <h2>Recent Posts</h2>
-                    <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus
-                        tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Donec dictum eros eu felis laoreet egestas.</p>
+                    <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia
+                        velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem,
+                        at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros
+                        eu felis laoreet egestas. Donec dictum eros eu felis laoreet egestas.</p>
                 </li>
             </ul>
         </div>
         <nav id="nav-footer">
             <div class="wrapper-center">
                 <ul>
-                    <li><a href="#/">Home</a></li>
-                    <li><a href="#/profile">Profile</a></li>
-                    <li><a href="#/about">About Us</a></li>
-                    <li><a href="#/missions">Missions</a></li>
-                    <li><a href="#/photos">Gallery</a></li>
+                    <li>
+                        <a href="#/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#/about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#/missions">Missions</a>
+                    </li>
+                    <li>
+                        <a href="#/photos">Gallery</a>
+                    </li>
                 </ul>
                 <!--<small>Designed by <p>Elegant WordPress Themes</p> | Powered by <p>WordPress</p>
         </small>-->
