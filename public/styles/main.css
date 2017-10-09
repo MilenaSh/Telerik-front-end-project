@@ -63,7 +63,7 @@ header {
     /*border: 1px solid yellow;*/
 }
 
-A .container-fluid {
+.container-fluid {
     margin: 0;
     padding: 0;
 }
@@ -102,7 +102,6 @@ A .container-fluid {
 }
 
 #nav li a {
-    /*TODO - check font size*/
     padding: 0;
     margin: 0;
     font-size: 12px;
@@ -984,15 +983,99 @@ aside h2 {
 /* Smartphones (portrait and landscape) ----------- */
 
 @media (max-width: 480px) {
-    /*CAROUSEL*/
-    #myCarousel {
-        max-width: 480px;
+    #nav,
+    #footer-content, #footer-content li, h2, #nav-footer, #nav-footer ul, #nested, #nested li, #features-list, #features-list p, #features ul, #info p {
+        margin: 0; 
+        padding: 0;
     }
+
+        /* .wrapper-center {
+        max-width: 100%;
+    } */
+
+    /* NAVBAR */
+
+        /* Fixed width */
+
+    #nav {
+        max-width: 400px !important;
+    }
+
+    #nav li a {
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+        color: white;
+        padding-top: -15px;
+        margin-top: -15px;
+        padding-bottom: 0;
+        padding-right: 5px;
+        padding-left: 5px; 
+        text-decoration: none;
+        font-family: DroidSans;
+        text-shadow: 1px 1px 0 black;
+    }
+
+    .share {
+        display: none;
+    }
+
+    .share img {
+        display: none;
+    }
+
+    .share-icon {
+        display: none;
+    }
+    
+/*end navigation for mobile*/
+
+
+    /*CAROUSEL*/
+
+    /* fixed width */
+
+    #myCarousel {
+        max-width: 400px;
+        height: 260px;
+        background-image: none;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
+    #slider-left,
+    #slider-right {
+        display: none;
+    }
+
+    #image-one,
+    #image-two,
+    #image-three {
+        margin: 0;
+        padding: 0;
+        margin-left: 5px;
+        margin-top: 10px;
+        max-height: 260px;
+        max-width: 400px;
+    }
+
+    #image-one img,
+    #image-two img,
+    #image-three img {
+        max-height: 250px;
+        max-width: 400px;
+    }
+
+    .image-text {
+  display: none;
+    }
+
     /*Features*/
     /*#content {
         min-width: 120%;
     }*/
     #features-list {
+        width: 100%;
         margin-left: 30px;
         height: 360px;
         overflow: hidden;
@@ -1011,6 +1094,7 @@ aside h2 {
         margin-bottom: 2px;
     }
     #features-list li p {
+        margin-left: 30px;
         width: 300px;
         height: 75px;
         overflow: hidden;
@@ -1031,18 +1115,31 @@ aside h2 {
     .read-more {
         margin: 0;
         padding: 0;
+        margin-left: -20px;
         margin-top: 5px;
     }
+
     #quote {
-        left: 225px;
+        left: 200px;
     }
+
     #additional-info {
-        left: 152px;
+        margin-top: 10px;
+        left: 140px;
+        height: 40px;
+        width: 120px;
     }
+
+    #info {
+        padding: 0;
+        margin: 0;
+        max-width: 460px;
+    }
+
     #info p {
-        width: 460px;
+        width: 380px;
         margin-top: 5px;
-        font-size: 22px;
+        font-size: 20px;
     }
     .work>li {
         margin-bottom: 20px;
@@ -1052,6 +1149,9 @@ aside h2 {
         height: 240px;
         width: 480px;
     }
+
+
+    
     /*Footer*/
     /*#footer {
         display: none;
