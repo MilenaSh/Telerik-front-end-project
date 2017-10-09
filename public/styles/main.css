@@ -998,7 +998,7 @@ aside h2 {
         /* Fixed width */
 
     #nav {
-        max-width: 400px !important;
+        max-width: 360px !important;
     }
 
     #nav li a {
