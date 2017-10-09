@@ -33,10 +33,10 @@
                                 <h2>{{author}} says: </h2>
                                 <p class="comment-p">{{content}}</p>
                                 {{!--<a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>--}}
-                                <a href="#/missions/{{this.id}}"><button class="btn">Read More</button></a>                                
+                                 <a href="#/missions/{{this.id}}"><button class="btn">Read More</button></a>                                
                             </div>
                             <time>{{date}}</time> {{#if subcomments}}
-                            <div id="sub-comment"> {{!--Start sub-comment--}}
+                            <div id="sub-comment"> 
                                 <img src="/public/images/avatar.jpeg" class="user-photo sub-user-photo">
                                 <div class="comment-box sub-somment-box">
                                     <h2>Nik Roach says: </h2>
@@ -45,13 +45,12 @@
                                         lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magnaest
                                     </p>
                                 <a href="#/missions/{{this.id}}"><button class="btn">Read More</button></a>                                                                   
-                                    {{!--<a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>--}}
+            
                                 </div>
                                 <time>11.03.2017</time>
-                            </div> {{!--End sub-comment--}} {{/if}}
-                        </div> {{!--End comment--}} {{/each}} {{/if}}
-                    </div> {{!--End comments--}}
-                    {{!--<a href="#/books/id/{{id}}/posts/add" class="commentLink">--}}
+                            </div> {{/if}}
+                        </div> {{/each}} {{/if}}
+                    </div>
                     <a href="#/missions/{{this.id}}"" class="commentLink">                    
                         <h1>Leave a Comment</h1>
                     </a>

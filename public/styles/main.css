@@ -926,12 +926,16 @@ aside h2 {
 }
 
 .comment-box h2 {
+    font-family: ColaborateThin;
+    font-size: 24px;
     margin-left: 7%;
     margin-top: 5%;
     position: absolute;
 }
 
 .comment-box p {
+    font-family: DroidSans;
+    font-size: 12px;
     margin-left: 7% !important;
     margin-top: 12% !important;
     position: absolute;
