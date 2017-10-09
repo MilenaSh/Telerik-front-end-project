@@ -66,8 +66,8 @@ const init = (data) => {
 
     app.get('/templates/:name', (request, response) => {
         const name = request.params.name;
-        // const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name, 'utf-8'); //- LOCALLY
-        const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name + '.handlebars', 'utf-8'); // HEROKU
+        // const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name, 'utf-8'); //- heroku
+         const template = fs.readFileSync(path.join(__dirname, '../../public/templates/') + name + '.handlebars', 'utf-8'); // LOCALLY
         return response.json(template);
     });
 

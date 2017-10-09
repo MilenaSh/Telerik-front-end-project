@@ -169,16 +169,13 @@ header {
 
 #slider-left {
     position: absolute;
-    top: 192px;
-    /*left: 27.5%;*/
-    background: none;
+    top: 135px;
+    /* background: none; */
 }
 
 #slider-right {
     position: absolute;
-    top: 192px;
-    /*right: 25%;*/
-    background: none;
+    top: 135px;
 }
 
 #image-one,
@@ -544,8 +541,6 @@ li#last p {
 
 /*end of work*/
 
-
-/*INDEX*/
 
 
 /*MISSION DETAILS*/
