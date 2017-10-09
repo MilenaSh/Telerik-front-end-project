@@ -1346,6 +1346,17 @@ aside h2 {
         }
     }
 
+    @media (max-width: 768px) {
+        #nav {
+            max-width: 720px;
+        }
+        aside {
+            display: none;
+        }
+        #medium {
+            margin-left: 5%;
+        }
+    }
 
     @media (max-width: 960px) {
         #a-1,
@@ -1359,46 +1370,43 @@ aside h2 {
             display: none;
         }
     }
-    @media (max-width: 768px) {
-        #nav {
-            max-width: 720px;
-        }
-        aside {
-            display: none;
-        }
-        #medium {
-            margin-left: 5%;
-        }
-    }
+
    
     /*MISSION DETAILS - RESPONSIVE*/
     @media (max-width: 480px) {
         .comment-box {
-            max-width: 400px;
+            max-width: 270px;
             max-height: 150px;
             background-size: 400px 150px;
-            margin-left: 12%;
+            margin-left: 15%;
         }
         .user-photo {
             border: 3px solid white;
-            max-width: 54px;
-            max-height: 54px;
+            max-width: 40px;
+            max-height: 44px;
+            margin-left: -10px;
         }
         #comment time {
-            margin-top: -85px;
-            margin-left: 2%;
+            margin-top: -90px;
+            margin-left: 0;
         }
         #comment>div.comment-box>p {
-            max-width: 350px !important;
+            max-width: 250px !important;
             max-height: 75px;
+            font-size: 14px;
         }
         .comment-box .btn {
             font-size: 9px;
             padding: 3px 5px 3px 5px;
+            margin-top: 45%;
+            margin-right: 0;
+            margin-left: 13%;
         }
         .sub-somment-box {
-            max-width: 330px;
-            background-size: 330px 150px;
+            max-width: 260px;
+            max-height: 150px;
+            background-size: 300px 150px;
+
         }
         .sub-somment-box .sub-comment-p {
             max-width: 295px !important;
@@ -1406,7 +1414,11 @@ aside h2 {
             margin-top: 14% !important;
         }
         .sub-somment-box .btn {
-            margin-top: 37%;
+            margin-top: 45%;
+        }
+
+        aside {
+            display: none;
         }
     }
 }

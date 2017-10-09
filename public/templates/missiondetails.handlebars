@@ -40,7 +40,7 @@
                                 <img src="/public/images/avatar.jpeg" class="user-photo sub-user-photo">
                                 <div class="comment-box sub-somment-box">
                                     <h2>Nik Roach says: </h2>
-                                    <p class="comment-p sub-comment-p">Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas
+                                    <p id="subcomment-text" class="comment-p sub-comment-p">Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas
                                         tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus
                                         lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magnaest
                                     </p>
@@ -51,7 +51,7 @@
                             </div> {{/if}}
                         </div> {{/each}} {{/if}}
                     </div>
-                    <a href="#/missions/{{this.id}}"" class="commentLink">                    
+                    <a href="#/missions/{{this.id}}" class="commentLink">                    
                         <h1>Leave a Comment</h1>
                     </a>
                     <img src="/public/images/border.png">
@@ -82,6 +82,6 @@
                         </div>
                     </div>
                 </aside>
-            </div> {{!--end medium--}} {{/each}}
+            </div> {{/each}}
         </div>
     </section>
