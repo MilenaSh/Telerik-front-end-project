@@ -34,7 +34,7 @@ function delRequest(url, body, headers = {}) {
 
 
 const getTemplate = (name) => {
-    // const url = 'http://localhost:3000/templates/' + name;  //LOCALLY
+     //const url = 'http://localhost:3000/templates/' + name;  //LOCALLY
     const url = 'https://gooddoers.herokuapp.com/templates/' + name; //HEROKU
     return getRequest(url)
         .then((template) => {
@@ -153,7 +153,7 @@ $(document).ready(() => {
                 getTemplate('portfolio')
                     .then((template) => {
                         rawTemplate = template;
-                        // return getRequest('http://localhost:3000/photos?page=' + page); // LOCALLY
+                         //return getRequest('http://localhost:3000/photos?page=' + page); // LOCALLY
                          return getRequest('https://gooddoers.herokuapp.com/photos?page=' + page); // HEROKU
                     })
                     .then((dataObj) => {

@@ -525,6 +525,10 @@ li#last p {
 }
 
 .work-box {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
     width: 150px;
     height: 104px;
     background-color: #25575E;
@@ -534,9 +538,28 @@ li#last p {
     box-shadow: #4E4C4C 5px 5px 5px inset;
 }
 
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    padding-left: 50px;
+    padding-top: 30px;
+
+  }
+
+  .middle img{
+
+    height: 35px;
+    width: 35px;
+  }
 .work-box:hover {
-    background-color: #6D8E93;
+    opacity: .5;
 }
+
+.work-box:hover .middle {
+    opacity: 1.5;
+  }
 
 
 /*end of work*/
