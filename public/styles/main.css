@@ -1179,6 +1179,52 @@ aside h2 {
         margin-left: -100px;
         float: left;
     }
+
+    /* Missions Details */
+
+    .comment-box {
+        max-width: 270px;
+        max-height: 150px;
+        background-size: 400px 150px;
+        margin-left: 15%;
+    }
+    .user-photo {
+        border: 3px solid white;
+        max-width: 40px;
+        max-height: 44px;
+        margin-left: -10px;
+    }
+    #comment time {
+        margin-top: -90px;
+        margin-left: 0;
+    }
+    #comment>div.comment-box>p {
+        max-width: 250px !important;
+        max-height: 75px;
+        font-size: 14px;
+    }
+    .comment-box .btn {
+        font-size: 9px;
+        padding: 3px 5px 3px 5px;
+        margin-top: 45%;
+        margin-right: 0;
+        margin-left: 13%;
+    }
+    .sub-somment-box {
+        max-width: 260px;
+        max-height: 150px;
+        background-size: 300px 150px;
+
+    }
+    .sub-somment-box .sub-comment-p {
+        max-width: 295px !important;
+        max-height: 75px !important;
+        margin-top: 14% !important;
+    }
+    .sub-somment-box .btn {
+        margin-top: 45%;
+    }
+
 }
 
 @media (max-width: 550px) {
@@ -1222,8 +1268,8 @@ aside h2 {
 
     /* Missions Details*/
 
-    h1.above {
-        font-size: 20px;
+    #primary-content h1 {
+        font-size: 25px;
     }
 }
 
@@ -1636,10 +1682,6 @@ aside h2 {
         }
         .sub-somment-box .btn {
             margin-top: 45%;
-        }
-
-        aside {
-            display: none;
         }
     }
 
