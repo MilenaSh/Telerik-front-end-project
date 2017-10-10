@@ -1027,12 +1027,13 @@ aside h2 {
     #nav {
         max-width: 800px;
     }
+
+    aside {
+        display: none;
+    }
     /* #a-1,
     #a-2 {
         width: 235px;
-    } */
-    /* aside {
-        display: none;
     } */
 
 }
@@ -1083,15 +1084,25 @@ aside h2 {
         width: 150px;
     }
 
-    aside {
-        display: none;
-    }
     #medium {
         margin-left: 5%;
     }
 
     #features {
         height: 1450px;
+    }
+
+    /* Missions */
+
+    #medium-content h1 {
+        max-width: 600px;
+        max-height: 155px;
+        font-size: 24px;
+    }
+
+    #medium-content p {
+        max-width: 400px;
+        max-height: 355px;
     }
 
     footer {
@@ -1149,6 +1160,25 @@ aside h2 {
     #features {
         height: 1700px;
     }
+
+    /* Missions */
+
+    #medium-content p {
+        max-width: 300px;
+        max-height: 355px;
+    }
+
+    #medium-content h1 {
+        max-width: 500px;
+        max-height: 155px;
+        font-size: 22px;
+    }
+
+    .btn {
+        margin-top: 150px;
+        margin-left: -100px;
+        float: left;
+    }
 }
 
 @media (max-width: 550px) {
@@ -1172,6 +1202,29 @@ aside h2 {
         margin-bottom: -300px;
     }
 
+     /* Missions */
+
+     #medium-content p {
+        max-width: 250px;
+        max-height: 355px;
+    }
+
+    #medium-content h1 {
+        max-width: 450px;
+        max-height: 155px;
+        font-size: 20px;
+    }
+
+    .btn {
+        margin-top: 150px;
+        margin-left: -130px;
+    }
+
+    /* Missions Details*/
+
+    h1.above {
+        font-size: 20px;
+    }
 }
 
 /* Smartphones  */
